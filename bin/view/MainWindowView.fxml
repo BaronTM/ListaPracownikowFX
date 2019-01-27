@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+   <children>
+      <VBox alignment="CENTER" spacing="15.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Button fx:id="butWczytaj" minWidth="80.0" mnemonicParsing="false" text="Wczytaj">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="butZapisz" minWidth="80.0" mnemonicParsing="false" text="Zapisz">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="butDodaj" minWidth="80.0" mnemonicParsing="false" onAction="#dodaj" text="Dodaj">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="butRaport" minWidth="80.0" mnemonicParsing="false" onAction="#raport" text="Raport">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="tabela" layoutX="146.0" layoutY="79.0" prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
+        <columns>
+          <TableColumn fx:id="colImie" editable="false" prefWidth="140.0" text="Imię" />
+          <TableColumn fx:id="colNazwisko" prefWidth="140.0" text="Nazwisko" />
+            <TableColumn fx:id="colPokoj" prefWidth="70.0" text="Pokój" />
+        </columns>
+      </TableView>
+      <HBox layoutX="405.0" layoutY="100.0" minWidth="240.0" prefHeight="246.0" prefWidth="240.0" spacing="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="115.0">
+               <children>
+                  <Label fx:id="labImie" text="Imię" />
+                  <TextField fx:id="txtImie" />
+                  <Label fx:id="labNazwisko" text="Nazwisko" />
+                  <TextField fx:id="txtNazwisko" />
+                  <Label fx:id="labPokoj" text="Nr pokoju" />
+                  <TextField fx:id="txtPokoj" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="115.0">
+               <children>
+                  <Label fx:id="labRozpoczecie" text="Godz. roz. pracy" />
+                  <TextField fx:id="txtRozpoczecie" />
+                  <Label fx:id="labZakonczenie" text="Godz. zak. pracy" />
+                  <TextField fx:id="txtZakonczenie" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
