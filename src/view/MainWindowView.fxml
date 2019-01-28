@@ -5,65 +5,74 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+<AnchorPane minHeight="600.0" minWidth="800.0" styleClass="background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
    <children>
-      <VBox alignment="CENTER" spacing="15.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+      <VBox alignment="CENTER" spacing="25.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
          <children>
-            <Button fx:id="butWczytaj" minWidth="80.0" mnemonicParsing="false" text="Wczytaj">
+            <Button fx:id="butWczytaj" minWidth="100.0" mnemonicParsing="false" onAction="#wczytaj" styleClass="optionButtons" stylesheets="@styles.css" text="Wczytaj">
                <font>
                   <Font name="DejaVu Sans Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="butZapisz" minWidth="80.0" mnemonicParsing="false" text="Zapisz">
+            <Button fx:id="butZapisz" minWidth="100.0" mnemonicParsing="false" onAction="#zapisz" styleClass="optionButtons" stylesheets="@styles.css" text="Zapisz">
                <font>
                   <Font name="DejaVu Sans Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="butDodaj" minWidth="80.0" mnemonicParsing="false" onAction="#dodaj" text="Dodaj">
+            <Button fx:id="butDodaj" minWidth="100.0" mnemonicParsing="false" onAction="#dodaj" styleClass="optionButtons" stylesheets="@styles.css" text="Dodaj">
                <font>
                   <Font name="DejaVu Sans Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="butRaport" minWidth="80.0" mnemonicParsing="false" onAction="#raport" text="Raport">
+            <Button fx:id="butRaport" minWidth="100.0" mnemonicParsing="false" onAction="#raport" styleClass="optionButtons" stylesheets="@styles.css" text="Raport">
                <font>
                   <Font name="DejaVu Sans Bold" size="13.0" />
                </font>
             </Button>
          </children>
       </VBox>
-      <TableView fx:id="tabela" layoutX="146.0" layoutY="79.0" prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
+      <TableView fx:id="tabela" layoutX="146.0" layoutY="79.0" prefHeight="0.0" prefWidth="352.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
         <columns>
-          <TableColumn fx:id="colImie" editable="false" prefWidth="140.0" text="Imię" />
-          <TableColumn fx:id="colNazwisko" prefWidth="140.0" text="Nazwisko" />
-            <TableColumn fx:id="colPokoj" prefWidth="70.0" text="Pokój" />
+          <TableColumn fx:id="colImie" editable="false" prefWidth="140.0" resizable="false" text="Imię" />
+          <TableColumn fx:id="colNazwisko" prefWidth="140.0" resizable="false" text="Nazwisko" />
+            <TableColumn fx:id="colPokoj" prefWidth="70.0" resizable="false" text="Pokój" />
         </columns>
       </TableView>
-      <HBox layoutX="405.0" layoutY="100.0" minWidth="240.0" prefHeight="246.0" prefWidth="240.0" spacing="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+      <HBox layoutX="405.0" layoutY="100.0" minWidth="240.0" prefHeight="246.0" prefWidth="240.0" spacing="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
          <children>
-            <VBox prefHeight="200.0" prefWidth="115.0">
+            <VBox prefHeight="200.0" prefWidth="115.0" spacing="5.0">
                <children>
-                  <Label fx:id="labImie" text="Imię" />
+                  <Label fx:id="labImie" styleClass="labels" stylesheets="@styles.css" text="Imię" />
                   <TextField fx:id="txtImie" />
-                  <Label fx:id="labNazwisko" text="Nazwisko" />
+                  <Label fx:id="labNazwisko" styleClass="labels" stylesheets="@styles.css" text="Nazwisko" />
                   <TextField fx:id="txtNazwisko" />
-                  <Label fx:id="labPokoj" text="Nr pokoju" />
-                  <TextField fx:id="txtPokoj" />
+                  <Label fx:id="labPokoj" styleClass="labels" stylesheets="@styles.css" text="Nr pokoju" />
+                  <TextField fx:id="txtPokoj">
+                     <tooltip>
+                        <Tooltip fx:id="pokojTip" autoHide="true" maxWidth="250.0" text="Empty Tooltip" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip></TextField>
                </children>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="115.0">
+            <VBox prefHeight="200.0" prefWidth="115.0" spacing="5.0">
                <children>
-                  <Label fx:id="labRozpoczecie" text="Godz. roz. pracy" />
+                  <Label fx:id="labRozpoczecie" styleClass="labels" stylesheets="@styles.css" text="Godz. roz. pracy" />
                   <TextField fx:id="txtRozpoczecie" />
-                  <Label fx:id="labZakonczenie" text="Godz. zak. pracy" />
+                  <Label fx:id="labZakonczenie" styleClass="labels" stylesheets="@styles.css" text="Godz. zak. pracy" />
                   <TextField fx:id="txtZakonczenie" />
                </children>
             </VBox>
          </children>
       </HBox>
+      <Button fx:id="butExit" layoutX="718.0" layoutY="18.0" mnemonicParsing="false" onAction="#exit" styleClass="exitButton" stylesheets="@styles.css" text="EXIT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
    </children>
 </AnchorPane>

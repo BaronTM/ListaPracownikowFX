@@ -1,0 +1,37 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.background{
+	-fx-background-color: rgb(81, 86, 88);
+}
+
+.labels {
+	-fx-text-fill: white;
+ 	-fx-font: italic 15 'sans-serif';
+}
+
+.optionButtons {
+ 	-fx-padding: 8 10 15 10;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 10,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-text-fill: linear-gradient(to right, black, darkviolet 70%);
+}
+
+.exitButton {
+	-fx-text-fill: white;
+ 	-fx-font: bold 20 'sans-serif';
+   	-fx-background-color: linear-gradient(dimgray, black);
+   	-fx-background-radius: 5;
+    -fx-effect: dropshadow( three-pass-box , darkgray , 20, 0.3 , 0 , 0 ); 
+}
+
+.exitButton:hover {
+	-fx-text-fill: hotpink;
+    -fx-effect: dropshadow( three-pass-box , gold , 20, 0.3 , 0 , 0 ); 
+}

@@ -1,1 +1,4 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.background{
+	-fx-background-color: rgb(81, 86, 88);
+}

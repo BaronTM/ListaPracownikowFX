@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
@@ -38,6 +39,7 @@ public class Main extends Application {
 			mwc.setMain(this);
 			mwc.setStage(this.primaryStage);
 			primaryStage.setScene(scene);
+			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.show();
 		} catch (IOException e) {
 			e.printStackTrace();
