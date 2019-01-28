@@ -36,6 +36,7 @@ public class Main extends Application {
 			scene = new Scene(pane);
 			mwc = loader.getController();
 			mwc.setMain(this);
+			mwc.setStage(this.primaryStage);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (IOException e) {
@@ -46,4 +47,5 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
 }
