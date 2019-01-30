@@ -1,9 +1,6 @@
 package model;
 
 import java.util.Comparator;
-
-import javafx.beans.binding.NumberBinding;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -14,7 +11,6 @@ public class Pracownik implements Comparable<Pracownik>, Comparator<Pracownik> {
 	private StringProperty pokoj;
 	private StringProperty rozpoczecie;
 	private StringProperty zakonczenie;
-	private NumberBinding czasPracy;
 
 	public Pracownik() {
 		this.imie = new SimpleStringProperty();

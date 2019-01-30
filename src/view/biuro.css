@@ -1,0 +1,77 @@
+.root {
+	-fx-background-color: transparent ;
+}
+
+.ramka {
+	-fx-fill: transparent;
+	-fx-stroke: black;
+	-fx-stroke-width: 3;
+	-fx-stroke-line-cap: round;
+	-fx-stroke-type: centered;
+}
+
+.pietro {
+	-fx-background-color: white;
+}
+
+.pietroLab{
+	-fx-background-color: transparent;
+	-fx-text-fill: linear-gradient( from 0.0% 0.0% to 100.0% 100.0%, rgb(51,102,102) 0.0, rgb(77,102,204) 100.0);
+	-fx-text-alignment: center;
+	-fx-font: bold 30 'sans-serif';
+	-fx-effect: dropshadow( three-pass-box , aqua, 20, 0.7 , 0 , 0 ); 
+}
+
+.wybranyPokoj {
+	-fx-fill: red;
+	-fx-stroke: black;
+	-fx-stroke-width: 3;
+	-fx-stroke-line-cap: round;
+	-fx-stroke-type: centered;
+}
+
+.pokoj {
+	-fx-fill: rgb(80,190,255);
+	-fx-stroke: black;
+	-fx-stroke-width: 3;
+	-fx-stroke-line-cap: round;
+	-fx-stroke-type: centered;
+}
+
+.nrPokoju {
+	-fx-fill: navy;
+	-fx-font: bold 15 'sans-serif';
+}
+
+.pomieszczenie {
+	-fx-fill: rgb(146,227,71);
+	-fx-stroke: black;
+	-fx-stroke-width: 3;
+	-fx-stroke-line-cap: round;
+	-fx-stroke-type: centered;
+}
+
+.pomieszczenieLab {
+	-fx-background-color: transparent;
+	-fx-text-fill: black;
+	-fx-text-alignment: center;
+	-fx-font: bold 10 'sans-serif';
+	-fx-effect: dropshadow( three-pass-box , rgb(255,238,70), 20, 0.7 , 0 , 0 ); 
+}
+
+.etykietaPlanu {
+	-fx-background-color: transparent ;
+}
+
+.etykietaLab {
+	-fx-background-color: transparent;
+	-fx-text-fill: radial-gradient( focus-angle 0.0deg, focus-distance 0.0%, center 50.0% 50.0%, radius 100.0%, rgb(253,173,91) 0.0, rgb(255,255,255) 100.0 );
+	-fx-text-alignment: center;
+	-fx-font: bold 52 'monospaced';
+	-fx-effect: dropshadow( three-pass-box , rgb(102,51,102), 40, 0.75 , 0 , 0 );
+	-fx-effect: dropshadow( three-pass-box , rgb(179,128,179), 70, 0.75 , 0 , 0 );
+}
+
+.tester {
+	-fx-background-color: rgb(255,127,127);
+}

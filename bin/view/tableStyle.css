@@ -1,0 +1,57 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.table-view {
+	-fx-background-color: rgb(81, 86, 88);
+	-fx-effect: innershadow(gaussian, rgba(1, 1, 1, 0.65), 15, 0.5, 0, 0);
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-row-cell {
+    -fx-background-color: linear-gradient( from 50.0% 0.0% to 50.0% 100.0%, rgb(0,0,0) 0.0, rgb(90,95,98) 100.0);
+    -fx-effect: innershadow(gaussian, rgb(25,34,100), 5, 0.5, 0, 0);
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell .text {
+       -fx-fill: white ;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.test {
+	 -fx-background-color:rgb(25,34,100)
+}
+
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+  -fx-background-color: null;
+  -fx-background-radius: 0;
+  -fx-background-insets: 0;
+  -fx-padding: -3;
+}
+
+.table-view  .scroll-bar .increment-arrow,
+.table-view  .scroll-bar .decrement-arrow {
+	-fx-shape: " ";	
+	-fx-padding:0;
+}
+
+.table-view *.scroll-bar:vertical *.increment-button,
+.table-view *.scroll-bar:vertical *.decrement-button {
+  -fx-background-color: null;
+  -fx-background-radius: 0;
+  -fx-background-insets: 0;
+  -fx-padding: -3;
+}
+

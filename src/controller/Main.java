@@ -36,7 +36,6 @@ public class Main extends Application {
 			primaryStage.setMinHeight(600);
 			scene = new Scene(pane);
 			mwc = loader.getController();
-			mwc.setMain(this);
 			mwc.setStage(this.primaryStage);
 			primaryStage.setScene(scene);
 			primaryStage.initStyle(StageStyle.UNDECORATED);

@@ -24,14 +24,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.FileChooser.ExtensionFilter;
+import model.PlanBiura;
 import model.Pracownik;
 
 public class MainWindowController {
 
-	private Main main;
 	private Stage stage;
 
 	@FXML
@@ -74,6 +75,8 @@ public class MainWindowController {
 	private TextField txtZakonczenie;
 	@FXML
 	private Tooltip pokojTip;
+	@FXML
+	private BorderPane panelPodBiuro;
 
 	private ObservableList<Pracownik> listaPracownikow;
 	private Pracownik aktualnyPracownik;
@@ -81,6 +84,7 @@ public class MainWindowController {
 	private PrintWriter printWriter;
 	private File selectedFile;
 	private Scanner scanner;
+	private PlanBiura planBiura;
 
 	public void initialize() {
 		listaPracownikow = FXCollections.observableArrayList();
@@ -109,14 +113,16 @@ public class MainWindowController {
 				}
 				if (txtPokoj.getText().length() > 0) {
 					int pok = Integer.parseInt(txtPokoj.getText());
+					planBiura.wskazPokoj(pok);
 					if (!((pok > 0 && pok <= 20) || (pok > 100 && pok <= 120) || (pok > 200 && pok <= 220)
 							|| (pok > 300 && pok <= 320) || (pok > 400 && pok <= 420) || (pok > 500 && pok <= 520))) {
 						pokojTip.show(stage, (txtPokoj.getScene().getWindow().getX() + 550),
 								(txtPokoj.getScene().getWindow().getY() + 200));
-
 					} else if (pokojTip.isShowing()) {
-						pokojTip.hide();
+						pokojTip.hide();					
 					}
+				} else {
+					planBiura.wskazPokoj(0);
 				}
 				listaPracownikow.sort(komparator);
 				tabela.refresh();
@@ -196,10 +202,9 @@ public class MainWindowController {
 				}
 			}
 		});
-	}
-
-	public void setMain(Main main) {
-		this.main = main;
+		
+		planBiura = new PlanBiura();
+		panelPodBiuro.setCenter(planBiura);
 	}
 
 	public void setStage(Stage stage) {
